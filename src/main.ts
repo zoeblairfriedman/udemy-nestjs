@@ -1,23 +1,8 @@
 // first file executed in any nest project
-import { Controller, Module, Get} from '@nestjs/common'
+import { AppModule } from './app.module';
 import { NestFactory } from '@nestjs/core'
 
-// this is a decorator. we are creating a class that will be a controller. it will handle and route incoming requests.
-@Controller()
-class AppController {
-  @Get()
-  getRootRoute(){
-    return 'hi there';
-  }
-}
 
-//create a module about the app controller 
-@Module({
-  controllers: [AppController]
-})
-
-
-class AppModule {}
 
 //define and invoke the bootstrap function, create an instance of our application and listen for incoming traffic
 async function bootstrap() {
