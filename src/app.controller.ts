@@ -2,10 +2,15 @@ import { Controller, Get} from '@nestjs/common'
 
 
 // this is a decorator. we are creating a class that will be a controller. it will handle and route incoming requests.
-@Controller()
+@Controller('/app')
 export class AppController {
-  @Get()
+  @Get('/asdf')
   getRootRoute(){
-    return 'hi there';
+    return 'bye there';
+  }
+
+  @Get("/hi")
+  getHeyThere() {
+    return 'hey there!'
   }
 }
